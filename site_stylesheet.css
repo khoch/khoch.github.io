@@ -1,0 +1,188 @@
+body {
+	font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif;
+	font-size: 18px;
+	line-height: 1.8em;
+	color: #222;
+}
+div#page {
+	max-width: 950px; 
+	margin: 0 auto;
+}
+div#header {
+	padding-bottom: 20px;
+    text-align: center;
+	letter-spacing: 0.8px;
+}
+@keyframes rollUpFirstBanner {
+	0% {
+		opacity: 1;
+		height: 100px; 
+		padding-top: 15px;
+	}
+	99.99% {
+	    opacity: 0;
+		height: 100px; 
+		padding-top: 15px;
+	}
+	100% {
+	    opacity: 0;
+		height: 0px; 
+		padding-top: 0px;
+	}
+}
+@-webkit-keyframes rollUpFirstBanner {
+	0% {
+		opacity: 1;
+		height: 100px; 
+		padding-top: 15px;
+	}
+	99.99% {
+	    opacity: 0;
+		height: 100px; 
+		padding-top: 15px;
+	}
+	100% {
+	    opacity: 0;
+		height: 0px; 
+		padding-top: 0px;
+	}
+}
+div#firstbanner {
+	height: 100px; 
+	padding-top: 15px;
+	font-weight: 500;
+	color: #444;
+	letter-spacing: 1px;
+	overflow: hidden;
+	animation: 1.5s ease-in-out 2s 1 rollUpFirstBanner forwards;
+	-webkit-animation: 1.5s ease-in-out 2s 1 rollUpFirstBanner forwards;
+}
+@keyframes rollUpBannerContainer {
+	0% {
+		height: 115px;
+	}
+	100% {
+		height: 65px;
+	}
+}
+@-webkit-keyframes rollUpBannerContainer {
+	0% {
+		height: 115px;
+	}
+	100% {
+		height: 65px;
+	}
+}
+div#bannercontainer{
+	height: 115px;
+	overflow: hidden;
+	animation: 1.5s ease-in-out 3.5s 1 rollUpBannerContainer forwards;
+	-webkit-animation: 1.5s ease-in-out 3.5s 1 rollUpBannerContainer forwards;
+}
+div#bigfirstbannertext {
+	font-size: 1.45em;
+}
+div#smallfirstbannertext {
+	font-size: 1.1em;
+}
+@keyframes displaySecondBanner {
+	0% {
+		opacity: 0;
+	}
+	100% {
+	    opacity: 1;
+	}
+}
+@-webkit-keyframes displaySecondBanner {
+	0% {
+		opacity: 0;
+	}
+	100% {
+	    opacity: 1;
+	}
+}
+div#secondbanner {
+	opacity: 0;
+	height: 43px; 
+	padding-top: 25px;
+	font-weight: 500;
+	color: #444;
+	letter-spacing: 1px;
+	overflow: hidden;
+	animation: 1s ease-in-out 3.6s 1 displaySecondBanner forwards;
+	-webkit-animation: 1s ease-in-out 3.6s 1 displaySecondBanner forwards;
+}
+div#secondbannertext {
+	font-size: 2em;
+}
+ul#site_tabs {
+	margin-top: 0px;
+    border-bottom: 1px solid #cecece;
+    padding: 10px;
+	list-style: none;
+}
+ul#site_tabs li{
+    display: inline;
+	position: relative;
+	width: 11.4%;
+    padding-left: 20px;
+	padding-right: 20px;
+}
+ul#site_tabs li#current_tab{
+    padding-left: 18px;
+	padding-right: 18px;
+}
+ul#site_tabs li#current_tab a{
+	font-weight: 900;
+	color: #222;
+}
+ul#site_tabs a{
+	text-decoration: none; 
+	color: #777;
+}
+ul#site_tabs > :first-child { 
+	padding: 0px 8px !important;
+}
+div#content {
+	padding-left: 75px;
+	padding-right: 75px;
+}
+div#content_header {
+	font-size: 32px;
+	font-weight: 400;
+	letter-spacing: 0.6px;
+	padding-bottom: 30px;
+}
+div#posts {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+div#post_title {
+	font-size: 24px;
+	font-weight: 400;
+	letter-spacing: 0.6px;
+	padding-bottom: 30px;
+}
+div#post_content {
+	border: 1px solid #cecece;
+	padding: 5px 30px 15px 30px;
+}
+div#post_link, div#post_link a {
+    text-align: center;
+	text-decoration: none; 
+	color: #777;
+}
+div#post_content > p {
+	text-align: justify;
+	margin-bottom: 10px;
+	text-indent: 40px;
+}
+div#content_text {
+	padding-left: 50px;
+	padding-right: 50px;
+	text-align: left;
+}
+div#content_text > p {
+	margin-bottom: 10px;
+	text-indent: 40px;
+}
