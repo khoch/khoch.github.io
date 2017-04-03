@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>khoch.io</title>
+		<link rel="stylesheet" type="text/css" href="site_stylesheet.css">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	</head>
+	<body>
+		<div id="page">
+			<div id="header">
+				<div id="bannercontainer">
+					<div id="firstbanner">
+						<div id="bigfirstbannertext">Personal Site </div> 
+						<div id="smallfirstbannertext">of</div> 
+						<div id="bigfirstbannertext">Krzysztof Hochlewicz</div> 
+					</div>
+					<div id="secondbanner">
+						<div id="secondbannertext">khoch.io</div> 
+					</div>
+				</div>
+				<ul id="site_tabs">
+					<li><a href="http://www.khoch.io/">&nbsp&nbsp / &nbsp&nbsp</a></li>
+					<li><a href="http://www.khoch.io/about">About</a></li>
+					<li><a href="http://www.khoch.io/essays">Essays</a></li>
+					<li><a href="http://www.khoch.io/reviews">Reviews</a></li>
+					<li><a href="http://www.khoch.io/blog?">Blog?</a></li>
+					<li><a href="http://www.khoch.io/projects">Projects</a></li>
+					<li><a href="http://www.khoch.io/photography">Photography</a></li>
+					<li><a href="http://www.khoch.io/resume.pdf">R&eacute;sum&eacute;</a></li>
+				</ul>
+			</div>
+			<div id="content">
+				<div id="content_header"> 
+					Recent posts 
+				</div>
+				<script>
+					var content_header = document.getElementById("content_header"),
+					elm = document.createElement('div');
+					if( elm.style.animationName !== undefined || elm.style.WebkitAnimationName !== undefined) { 
+						content_header.innerHTML = "Animation is supported by this browser!"; 
+					} else {
+						content_header.innerHTML = "Animation is not supported by this browser!"; 
+					}
+				</script>
+			</div>
+		</div>
+	</body>
+</html>
