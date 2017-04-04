@@ -79,8 +79,8 @@ div#firstbanner {
 	color: #444;
 	letter-spacing: 1px;
 	overflow: hidden;
-	animation: 0s 0s 1 setDefaultsFirstBanner forwards, 1.5s ease-in-out 2s 1 fadeAndRollUpFirstBanner forwards;
-	-webkit-animation: 0s 0s 1 setDefaultsFirstBanner forwards, 1.5s ease-in-out 2s 1 fadeAndRollUpFirstBanner forwards;
+	animation: 1ms 0s 1 setDefaultsFirstBanner forwards, 1.5s ease-in-out 2s 1 fadeAndRollUpFirstBanner forwards;
+	-webkit-animation: 1ms 0s 1 setDefaultsFirstBanner forwards, 1.5s ease-in-out 2s 1 fadeAndRollUpFirstBanner forwards;
 }
 @keyframes setDefaultsBannerContainer {
 	0% {
@@ -117,8 +117,8 @@ div#firstbanner {
 div#bannercontainer{
 	height: 65px;  /* Hacky fix for setting defaults if animation does not play. Should be 115px. */
 	overflow: hidden;
-	animation: 0s 0s 1 setDefaultsBannerContainer forwards, 1.5s ease-in-out 3.5s 1 rollUpBannerContainer forwards;
-	-webkit-animation: 0s 0s 1 setDefaultsBannerContainer forwards, 1.5s ease-in-out 3.5s 1 rollUpBannerContainer forwards;
+	animation: 1ms 0s 1 setDefaultsBannerContainer forwards, 1.5s ease-in-out 3.5s 1 rollUpBannerContainer forwards;
+	-webkit-animation: 1ms 0s 1 setDefaultsBannerContainer forwards, 1.5s ease-in-out 3.5s 1 rollUpBannerContainer forwards;
 }
 div#bigfirstbannertext {
 	font-size: 1.45em;
@@ -166,8 +166,8 @@ div#secondbanner {
 	color: #444;
 	letter-spacing: 1px;
 	overflow: hidden;
-	animation: 0s 0s 1 setDefaultsSecondBanner forwards, 1s ease-in-out 3.6s 1 displaySecondBanner forwards;
-	-webkit-animation: 0s 0s 1 setDefaultsSecondBanner forwards, 1s ease-in-out 3.6s 1 displaySecondBanner forwards;
+	animation: 1ms 0s 1 setDefaultsSecondBanner forwards, 1s ease-in-out 3.6s 1 displaySecondBanner forwards;
+	-webkit-animation: 1ms 0s 1 setDefaultsSecondBanner forwards, 1s ease-in-out 3.6s 1 displaySecondBanner forwards;
 }
 div#secondbannertext {
 	font-size: 2em;
