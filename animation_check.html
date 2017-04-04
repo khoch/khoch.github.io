@@ -36,7 +36,7 @@
 				<script>
 					var content_header = document.getElementById("content_header"),
 					elm = document.createElement('div');
-					if( elm.style.animationName !== undefined || elm.style.WebkitAnimationName !== undefined) { 
+					if( elm.style.animationName !== undefined) { //|| elm.style.WebkitAnimationName !== undefined
 						content_header.innerHTML = "Animation is supported by this browser!"; 
 					} else {
 						content_header.innerHTML = "Animation is not supported by this browser!"; 
