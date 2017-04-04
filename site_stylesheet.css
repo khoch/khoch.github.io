@@ -16,43 +16,36 @@ div#header {
 @keyframes testAnimation {
 	0% {
 		opacity: 0.1;
-		width: 9px;
-		height: 20px;
+		width: 90px;
 	}
 	50% {
 		opacity: 0.1;
-		width: 10px;
-		height: 20px;
+		width: 100px;
 	}
 	100% {
 	    opacity: 0.2;
-		width: 10px;
-		height: 200px;
+		width: 100px;
 	}
 }
 @-webkit-keyframes testAnimation {
 	0% {
 		opacity: 0.1;
-		width: 9px;
-		height: 20px;
+		width: 90px;
 	}
 	50% {
 		opacity: 0.1;
-		width: 10px;
-		height: 20px;
+		width: 100px;
 	}
 	100% {
 	    opacity: 0.2;
-		width: 10px;
-		height: 200px;
+		width: 100px;
 	}
 }
 div#anim_test {
-	width: 10px;
-	height: 10px;
+	width: 100px;
 	opacity: 1;
-	animation: 0.0001s ease-in-out 0s 1 testAnimation forwards;
-	-webkit-animation: 0.0001s ease-in-out 0s 1 testAnimation forwards;
+	animation: 0.0001s 0s 1 testAnimation forwards;
+	-webkit-animation: 0.0001s 0s 1 testAnimation forwards;
 }
 @keyframes fadeAndRollUpFirstBanner {
 	0% {
@@ -95,8 +88,8 @@ div#firstbanner {
 	color: #444;
 	letter-spacing: 1px;
 	overflow: hidden;
-	animation: 1.5s ease-in-out 0s 1 fadeAndRollUpFirstBanner forwards;
-	-webkit-animation: 1.5s ease-in-out 0s 1 fadeAndRollUpFirstBanner forwards;
+	animation: 1.5s 2s 1 fadeAndRollUpFirstBanner forwards;
+	-webkit-animation: 1.5s 2s 1 fadeAndRollUpFirstBanner forwards;
 }
 @keyframes rollUpBannerContainer {
 	0% {
@@ -117,8 +110,8 @@ div#firstbanner {
 div#bannercontainer{
 	height: 115px;
 	overflow: hidden;
-	animation: 1.5s ease-in-out 3.5s 1 rollUpBannerContainer forwards;
-	-webkit-animation: 1.5s ease-in-out 3.5s 1 rollUpBannerContainer forwards;
+	animation: 1.5s 3.5s 1 rollUpBannerContainer forwards;
+	-webkit-animation: 1.5s 3.5s 1 rollUpBannerContainer forwards;
 }
 div#bigfirstbannertext {
 	font-size: 1.45em;
@@ -150,8 +143,8 @@ div#secondbanner {
 	color: #444;
 	letter-spacing: 1px;
 	overflow: hidden;
-	animation: 1s ease-in-out 3.6s 1 displaySecondBanner forwards;
-	-webkit-animation: 1s ease-in-out 3.6s 1 displaySecondBanner forwards;
+	animation: 1s 3.6s 1 displaySecondBanner forwards;
+	-webkit-animation: 1s 3.6s 1 displaySecondBanner forwards;
 }
 div#secondbannertext {
 	font-size: 2em;

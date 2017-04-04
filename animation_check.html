@@ -6,7 +6,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	</head>
 	<body>
-		<div id="anim_test">Hello</div>
+		<div id="anim_test"></div>
 		<div id="anim_result" style="height: 20px;"></div>
 		<div id="page">
 			<div id="header">
@@ -16,7 +16,7 @@
 					anim_result_banner = document.getElementById('anim_result'),
 					anim_test_banner_style = window.getComputedStyle(anim_test_banner)
 					if (anim_test_banner_style.getPropertyValue('opacity') != "1") {
-					anim_result_banner.innerHTML = "Animation will run in this browser! Opacity is: " + anim_test_banner_style.getPropertyValue('opacity');
+					anim_result_banner.innerHTML = "Animation will run in this browser!";
 					} else {
 					anim_result_banner.innerHTML = "Animation will not run in this browser!";
 					}
@@ -45,21 +45,6 @@
 				<div id="content_header"> 
 					Recent posts 
 				</div>
-				<script>
-					var first_banner = document.getElementById('firstbanner'),
-					content_header = document.getElementById("content_header"),
-					first_banner_opacity = window.getComputedStyle(first_banner).getPropertyValue('opacity');
-					var i = 0, howManyTimes = 16;
-					function f() {
-						content_header.innerHTML = window.getComputedStyle(document.getElementById('firstbanner')).getPropertyValue('opacity')
-						i++;
-						if( i < howManyTimes ){
-							setTimeout( f, 100 );
-						}
-					}
-					f();
-
-				</script>
 				<!--- <script>
 					var content_header = document.getElementById("content_header"),
 					elm = document.createElement('div');
