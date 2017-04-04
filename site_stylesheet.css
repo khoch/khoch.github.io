@@ -15,21 +15,26 @@ div#header {
 }
 @keyframes testAnimation {
 	0% {
-		opacity: 0;
+		opacity: 0.1;
+		width: 100px;
 	}
 	100% {
-	    opacity: 0;
+	    opacity: 0.2;
+		width: 90px;
 	}
 }
 @-webkit-keyframes testAnimation {
 	0% {
-		opacity: 0;
+		opacity: 0.1;
+		width: 100px;
 	}
 	100% {
-	    opacity: 0;
+	    opacity: 0.2;
+		width: 90px;
 	}
 }
 div#anim_test {
+	width: 100px;
 	opacity: 1;
 	animation: 0.01s 0s 1 testAnimation forwards;
 	-webkit-animation: 0.01s 0s 1 testAnimation forwards;
