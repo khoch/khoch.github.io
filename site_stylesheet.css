@@ -16,28 +16,36 @@ div#header {
 @keyframes testAnimation {
 	0% {
 		opacity: 0.1;
-		width: 100px;
-	}
-	100% {
-	    opacity: 0.2;
 		width: 90px;
 	}
-}
-@-webkit-keyframes testAnimation {
-	0% {
+	50% {
 		opacity: 0.1;
 		width: 100px;
 	}
 	100% {
 	    opacity: 0.2;
+		width: 100px;
+	}
+}
+@-webkit-keyframes testAnimation {
+	0% {
+		opacity: 0.1;
 		width: 90px;
+	}
+	50% {
+		opacity: 0.1;
+		width: 100px;
+	}
+	100% {
+	    opacity: 0.2;
+		width: 100px;
 	}
 }
 div#anim_test {
 	width: 100px;
 	opacity: 1;
-	animation: 0.01s 0s 1 testAnimation forwards;
-	-webkit-animation: 0.01s 0s 1 testAnimation forwards;
+	animation: 0.0001s 0s 1 testAnimation forwards;
+	-webkit-animation: 0.0001s 0s 1 testAnimation forwards;
 }
 @keyframes fadeAndRollUpFirstBanner {
 	0% {

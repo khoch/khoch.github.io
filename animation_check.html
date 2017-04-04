@@ -16,7 +16,7 @@
 					anim_result_banner = document.getElementById('anim_result'),
 					anim_test_banner_style = window.getComputedStyle(anim_test_banner)
 					if (anim_test_banner_style.getPropertyValue('opacity') != "1") {
-					anim_result_banner.innerHTML = "Animation will run in this browser!";
+					anim_result_banner.innerHTML = "Animation will run in this browser! Opacity is: " + anim_test_banner_style.getPropertyValue('opacity');
 					} else {
 					anim_result_banner.innerHTML = "Animation will not run in this browser!";
 					}
