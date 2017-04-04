@@ -16,35 +16,35 @@ div#header {
 @keyframes rollUpFirstBanner {
 	0% {
 		opacity: 1;
-		//height: 100px; 
-		padding-top: 15px;
+		/*height: 100px; 
+		padding-top: 15px;*/
 	}
 	99.99% {
 	    opacity: 0;
-		//height: 100px; 
-		//padding-top: 15px;
+		/*height: 100px; 
+		padding-top: 15px;*/
 	}
 	100% {
 	    opacity: 0;
-		//height: 0px; 
-		//padding-top: 0px;
+		/*height: 0px; 
+		padding-top: 0px;*/
 	}
 }
 @-webkit-keyframes rollUpFirstBanner {
 	0% {
 		opacity: 1;
-		//height: 100px; 
-		//padding-top: 15px;
+		/*height: 100px; 
+		padding-top: 15px;*/
 	}
 	99.99% {
 	    opacity: 0;
-		//height: 100px; 
-		//padding-top: 15px;
+		/*height: 100px; 
+		padding-top: 15px;*/
 	}
 	100% {
 	    opacity: 0;
-		//height: 0px; 
-		//padding-top: 0px;
+		/*height: 0px; 
+		padding-top: 0px;*/
 	}
 }
 div#firstbanner {
