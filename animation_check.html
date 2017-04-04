@@ -6,7 +6,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	</head>
 	<body>
-		<div id="anim_test" style="height: 0px;"></div>
+		<div id="anim_test" style="height: 1px;"></div>
 		<div id="anim_result" style="height: 20px;"></div>
 		<div id="page">
 			<div id="header">
@@ -49,7 +49,7 @@
 					var first_banner = document.getElementById('firstbanner'),
 					content_header = document.getElementById("content_header"),
 					first_banner_opacity = window.getComputedStyle(first_banner).getPropertyValue('opacity');
-					var i = 0, howManyTimes = 15;
+					var i = 0, howManyTimes = 16;
 					function f() {
 						content_header.innerHTML = window.getComputedStyle(document.getElementById('firstbanner')).getPropertyValue('opacity')
 						i++;
