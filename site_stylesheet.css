@@ -13,17 +13,26 @@ div#header {
     text-align: center;
 	letter-spacing: 0.8px;
 }
-@keyframes setDefaultsFirstBanner {
+@keyframes testAnimation {
 	0% {
-	    opacity: 0;
-		height: 0px; 
-		padding-top: 0px;
+		opacity: 0;
 	}
 	100% {
-		opacity: 1;
-		height: 100px; 
-		padding-top: 15px;
+	    opacity: 0;
 	}
+}
+@-webkit-keyframes testAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+	    opacity: 0;
+	}
+}
+div#anim_test {
+	opacity: 1;
+	animation: 0.01s 0s 1 testAnimation forwards;
+	-webkit-animation: 0.01s 0s 1 testAnimation forwards;
 }
 @keyframes fadeAndRollUpFirstBanner {
 	0% {
@@ -40,18 +49,6 @@ div#header {
 	    opacity: 0;
 		height: 0px; 
 		padding-top: 0px;
-	}
-}
-@-webkit-keyframes setDefaultsFirstBanner {
-	0% {
-	    opacity: 0;
-		height: 0px; 
-		padding-top: 0px;
-	}
-	100% {
-		opacity: 1;
-		height: 100px; 
-		padding-top: 15px;
 	}
 }
 @-webkit-keyframes fadeAndRollUpFirstBanner {
@@ -72,23 +69,14 @@ div#header {
 	}
 }
 div#firstbanner {
-	opacity: 0; /* Hacky fix for setting defaults if animation does not play. Should be 1. */
-	height: 0px; /* Hacky fix for setting defaults if animation does not play. Should be 100px. */
-	padding-top: 0px; /* Hacky fix for setting defaults if animation does not play. Should be 15px. */
+	height: 100px; 
+	padding-top: 15px;
 	font-weight: 500;
 	color: #444;
 	letter-spacing: 1px;
 	overflow: hidden;
-	animation: 1ms 0s 1 setDefaultsFirstBanner forwards, 1.5s ease-in-out 2s 1 fadeAndRollUpFirstBanner forwards;
-	-webkit-animation: 1ms 0s 1 setDefaultsFirstBanner forwards, 1.5s ease-in-out 2s 1 fadeAndRollUpFirstBanner forwards;
-}
-@keyframes setDefaultsBannerContainer {
-	0% {
-		height: 65px;
-	}
-	100% {
-		height: 115px;
-	}
+	animation: 1.5s ease-in-out 2s 1 fadeAndRollUpFirstBanner forwards;
+	-webkit-animation: 1.5s ease-in-out 2s 1 fadeAndRollUpFirstBanner forwards;
 }
 @keyframes rollUpBannerContainer {
 	0% {
@@ -96,14 +84,6 @@ div#firstbanner {
 	}
 	100% {
 		height: 65px;
-	}
-}
-@-webkit-keyframes setDefaultsBannerContainer {
-	0% {
-		height: 65px;
-	}
-	100% {
-		height: 115px;
 	}
 }
 @-webkit-keyframes rollUpBannerContainer {
@@ -115,10 +95,10 @@ div#firstbanner {
 	}
 }
 div#bannercontainer{
-	height: 65px;  /* Hacky fix for setting defaults if animation does not play. Should be 115px. */
+	height: 115px;
 	overflow: hidden;
-	animation: 1ms 0s 1 setDefaultsBannerContainer forwards, 1.5s ease-in-out 3.5s 1 rollUpBannerContainer forwards;
-	-webkit-animation: 1ms 0s 1 setDefaultsBannerContainer forwards, 1.5s ease-in-out 3.5s 1 rollUpBannerContainer forwards;
+	animation: 1.5s ease-in-out 3.5s 1 rollUpBannerContainer forwards;
+	-webkit-animation: 1.5s ease-in-out 3.5s 1 rollUpBannerContainer forwards;
 }
 div#bigfirstbannertext {
 	font-size: 1.45em;
@@ -126,28 +106,12 @@ div#bigfirstbannertext {
 div#smallfirstbannertext {
 	font-size: 1.1em;
 }
-@keyframes setDefaultsSecondBanner {
-	0% {
-		opacity: 1;
-	}
-	100% {
-	    opacity: 0;
-	}
-}
 @keyframes displaySecondBanner {
 	0% {
 		opacity: 0;
 	}
 	100% {
 	    opacity: 1;
-	}
-}
-@-webkit-keyframes setDefaultsSecondBanner {
-	0% {
-		opacity: 1;
-	}
-	100% {
-	    opacity: 0;
 	}
 }
 @-webkit-keyframes displaySecondBanner {
@@ -159,15 +123,15 @@ div#smallfirstbannertext {
 	}
 }
 div#secondbanner {
-	opacity: 1; /* Hacky fix for setting defaults if animation does not play. Should be 0. */
+	opacity: 0;
 	height: 43px; 
 	padding-top: 25px;
 	font-weight: 500;
 	color: #444;
 	letter-spacing: 1px;
 	overflow: hidden;
-	animation: 1ms 0s 1 setDefaultsSecondBanner forwards, 1s ease-in-out 3.6s 1 displaySecondBanner forwards;
-	-webkit-animation: 1ms 0s 1 setDefaultsSecondBanner forwards, 1s ease-in-out 3.6s 1 displaySecondBanner forwards;
+	animation: 1s ease-in-out 3.6s 1 displaySecondBanner forwards;
+	-webkit-animation: 1s ease-in-out 3.6s 1 displaySecondBanner forwards;
 }
 div#secondbannertext {
 	font-size: 2em;

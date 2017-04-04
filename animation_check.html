@@ -6,9 +6,21 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	</head>
 	<body>
+		<div id="anim_test" style="height: 0px;"></div>
+		<div id="anim_result" style="height: 20px;"></div>
 		<div id="page">
 			<div id="header">
 				<div id="bannercontainer">
+					<script>
+					var anim_test_banner = document.getElementById('anim_test'),
+					anim_result_banner = document.getElementById('anim_result'),
+					anim_test_banner_style = window.getComputedStyle(anim_test_banner)
+					if (anim_test_banner_style.getPropertyValue('opacity') == "0") {
+					anim_result_banner.innerHTML = "Animation will run in this browser!";
+					} else {
+					anim_result_banner.innerHTML = "Animation will not run in this browser!";
+					}
+					</script>
 					<div id="firstbanner">
 						<div id="bigfirstbannertext">Personal Site </div> 
 						<div id="smallfirstbannertext">of</div> 
