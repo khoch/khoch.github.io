@@ -6,20 +6,26 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	</head>
 	<body>
-		<div id="anim_test"></div>
+		<div id="anim_test_1" style="height: 0px;"></div>
+		<div id="anim_test_2" style="height: 0px;"></div>
 		<div id="anim_result" style="height: 20px;"></div>
 		<div id="page">
 			<div id="header">
 				<div id="bannercontainer">
 					<script>
-					var anim_test_banner = document.getElementById('anim_test'),
-					anim_result_banner = document.getElementById('anim_result'),
-					anim_test_banner_style = window.getComputedStyle(anim_test_banner)
-					if (anim_test_banner_style.getPropertyValue('opacity') != "1") {
-					anim_result_banner.innerHTML = "Animation will run in this browser!";
-					} else {
-					anim_result_banner.innerHTML = "Animation will not run in this browser!";
-					}
+						var anim_test_banner_1 = document.getElementById('anim_test_1'),
+						anim_test_banner_2 = document.getElementById('anim_test_2'),
+						anim_result_banner = document.getElementById('anim_result');
+						if (window.getComputedStyle(anim_test_banner_1).getPropertyValue('opacity') != "1") {
+							anim_result_banner.innerHTML = "Animation will run in this browser with ease-in-out.";
+						} else if (window.getComputedStyle(anim_test_banner_2).getPropertyValue('opacity') != "1"){
+							anim_result_banner.innerHTML = "Animation will run in this browser without ease-in-out.";
+							var limited_anim_works = true;
+						} else {
+							anim_result_banner.innerHTML = "Animation will not run in this browser.";
+							var no_anim_works = true;
+						}
+						anim_result_banner.style.padding.top = "0px";
 					</script>
 					<div id="firstbanner">
 						<div id="bigfirstbannertext">Personal Site </div> 
@@ -30,6 +36,34 @@
 						<div id="secondbannertext">khoch.io</div> 
 					</div>
 				</div>
+				<script>
+					if (limited_anim_works) {
+						var first_banner = document.getElementById('firstbanner');
+						first_banner.style.animation = "1.5s 2s 1 fadeAndRollUpFirstBanner forwards";
+						first_banner.style.webkitAnimation = "1.5s 2s 1 fadeAndRollUpFirstBanner forwards";
+						var banner_container = document.getElementById('bannercontainer');
+						banner_container.style.animation = "1.5s 3.5s 1 rollUpBannerContainer forwards";
+						banner_container.style.webkitAnimation = "1.5s 3.5s 1 rollUpBannerContainer forwards";
+						var second_banner = document.getElementById('secondbanner');
+						second_banner.style.animation = "1s 3.6s 1 displaySecondBanner forwards";
+						second_banner.style.webkitAnimation = "1s 3.6s 1 displaySecondBanner forwards";
+					} else if (no_anim_works) {
+						var first_banner = document.getElementById('firstbanner');
+						first_banner.style.opacity = "0";
+						first_banner.style.height = "0px";
+						first_banner.style.padding.top = "0px";
+						first_banner.style.animation = "";
+						first_banner.style.webkitAnimation = "";
+						var banner_container = document.getElementById('bannercontainer');
+						banner_container.style.height = "65px";
+						banner_container.style.animation = "";
+						banner_container.style.webkitAnimation = "";
+						var second_banner = document.getElementById('secondbanner');
+						second_banner.style.opacity = "1";
+						second_banner.style.animation = "";
+						second_banner.style.webkitAnimation = "";
+					}
+				</script>
 				<ul id="site_tabs">
 					<li><a href="http://www.khoch.io/">&nbsp&nbsp / &nbsp&nbsp</a></li>
 					<li><a href="http://www.khoch.io/about">About</a></li>
@@ -43,7 +77,7 @@
 			</div>
 			<div id="content">
 				<div id="content_header"> 
-					Recent posts 
+					CSS Animation Test Page
 				</div>
 				<!--- <script>
 					var content_header = document.getElementById("content_header"),
