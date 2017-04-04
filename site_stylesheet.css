@@ -35,24 +35,27 @@ div#header {
 		padding-top: 0px;
 	}
 }
-@-webkit-keyframes rollUpFirstBanner {
+@-webkit-keyframes fadeFirstBanner {
 	0% {
 		opacity: 1;
-		height: 100px; 
-		padding-top: 15px;
 	}
 	57.14% {
 		opacity: 1;
+	}
+	100% {
+	    opacity: 0;
+	}
+}
+@-webkit-keyframes rollUpFirstBanner {
+	0% {
 		height: 100px; 
 		padding-top: 15px;
 	}
 	99.99% {
-	    opacity: 0;
 		height: 100px; 
 		padding-top: 15px;
 	}
 	100% {
-	    opacity: 0;
 		height: 0px; 
 		padding-top: 0px;
 	}
@@ -66,7 +69,7 @@ div#firstbanner {
 	letter-spacing: 1px;
 	overflow: hidden;
 	animation: 3.5s ease-in-out 0s 1 rollUpFirstBanner forwards; /* 1.5s dur 2s del */
-	-webkit-animation: 3.5s ease-in-out 0s 1 rollUpFirstBanner forwards;
+	-webkit-animation: 3.5s ease-in-out 0s 1 fadeFirstBanner forwards, 3.5s ease-in-out 0s 1 rollUpFirstBanner forwards;
 }
 @keyframes rollUpBannerContainer {
 	0% {
