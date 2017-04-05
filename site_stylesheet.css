@@ -167,7 +167,7 @@ div#firstbanner {
 	color: #444;
 	letter-spacing: 1px;
 	overflow: hidden;
-	-webkit-animation: 2.7s ease-in-out 1.8s 1 fadeOutRollUpFirstBanner forwards;
+	-webkit-animation: 2.7s 0s 1 fadeOutRollUpFirstBanner forwards;
 }
 @keyframes rollUpBannerContainer {
 	0% {
