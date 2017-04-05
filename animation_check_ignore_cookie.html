@@ -64,14 +64,14 @@
 					} else if (limited_anim_works) { 
 						//if anim hasn't played and ease-in-out is not supported, revert to default (ease)
 						var first_banner = document.getElementById('firstbanner');
-						first_banner.style.animation = "5s 0s 1 fadeAndRollUpFirstBanner forwards";
-						first_banner.style.webkitAnimation = "5s 0s 1 fadeAndRollUpFirstBanner forwards";
+						first_banner.style.animation = "4.5s 0s 1 fadeAndRollUpFirstBanner forwards";
+						first_banner.style.webkitAnimation = "4.5s 0s 1 fadeAndRollUpFirstBanner forwards";
 						var banner_container = document.getElementById('bannercontainer');
-						banner_container.style.animation = "1.5s 5s 1 rollUpBannerContainer forwards";
-						banner_container.style.webkitAnimation = "1.5s 5s 1 rollUpBannerContainer forwards";
+						banner_container.style.animation = "1.5s 4.5s 1 rollUpBannerContainer forwards";
+						banner_container.style.webkitAnimation = "1.5s 4.5s 1 rollUpBannerContainer forwards";
 						var second_banner = document.getElementById('secondbanner');
-						second_banner.style.animation = "1s 5.1s 1 displaySecondBanner forwards";
-						second_banner.style.webkitAnimation = "1s 5.1s 1 displaySecondBanner forwards";
+						second_banner.style.animation = "1s 4.6s 1 displaySecondBanner forwards";
+						second_banner.style.webkitAnimation = "1s 4.6s 1 displaySecondBanner forwards";
 					} 
 				</script>
 				<ul id="site_tabs">
@@ -119,7 +119,7 @@
 						document.cookie = "anim_played=true" + expires + "; path=/";
 						console.log("animation played");
 					}
-				}, 6000);
+				}, 5500);
 			}
 		</script>
 	</body>
