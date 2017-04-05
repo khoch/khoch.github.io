@@ -13,6 +13,11 @@
 			<div id="header">
 				<div id="bannercontainer">
 					<script>
+						if (document.cookie == "anim_played=true") {
+							var anim_played = true;
+						} else {
+							var anim_played = false;
+						}
 						var anim_test_banner_1 = document.getElementById('anim_test_1'),
 						anim_test_banner_2 = document.getElementById('anim_test_2'),
 						anim_result_banner = document.getElementById('anim_result');
@@ -25,7 +30,6 @@
 							anim_result_banner.innerHTML = "Animation will not run in this browser.";
 							var no_anim_works = true;
 						}
-						anim_result_banner.style.padding.top = "0px";
 					</script>
 					<div id="firstbanner">
 						<div id="bigfirstbannertext">Personal Site </div> 
@@ -37,7 +41,25 @@
 					</div>
 				</div>
 				<script>
-					if (limited_anim_works) {
+					if (no_anim_works || anim_played) { 
+						//skip animation entirely for positively outdated browsers
+						//also skip if played in the past 24h
+						var first_banner = document.getElementById('firstbanner');
+						first_banner.style.opacity = "0";
+						first_banner.style.height = "0px";
+						first_banner.style.padding = "0px";
+						first_banner.style.animation = "none";
+						first_banner.style.webkitAnimation = "none";
+						var banner_container = document.getElementById('bannercontainer');
+						banner_container.style.height = "65px";
+						banner_container.style.animation = "none";
+						banner_container.style.webkitAnimation = "none";
+						var second_banner = document.getElementById('secondbanner');
+						second_banner.style.opacity = "1";
+						second_banner.style.animation = "none";
+						second_banner.style.webkitAnimation = "none";
+					} else if (limited_anim_works) { 
+						//if ease-in-out is not supported, revert to default (ease)
 						var first_banner = document.getElementById('firstbanner');
 						first_banner.style.animation = "1.5s 2s 1 fadeAndRollUpFirstBanner forwards";
 						first_banner.style.webkitAnimation = "1.5s 2s 1 fadeAndRollUpFirstBanner forwards";
@@ -47,22 +69,7 @@
 						var second_banner = document.getElementById('secondbanner');
 						second_banner.style.animation = "1s 3.6s 1 displaySecondBanner forwards";
 						second_banner.style.webkitAnimation = "1s 3.6s 1 displaySecondBanner forwards";
-					} else if (no_anim_works) {
-						var first_banner = document.getElementById('firstbanner');
-						first_banner.style.opacity = "0";
-						first_banner.style.height = "0px";
-						first_banner.style.padding.top = "0px";
-						first_banner.style.animation = "";
-						first_banner.style.webkitAnimation = "";
-						var banner_container = document.getElementById('bannercontainer');
-						banner_container.style.height = "65px";
-						banner_container.style.animation = "";
-						banner_container.style.webkitAnimation = "";
-						var second_banner = document.getElementById('secondbanner');
-						second_banner.style.opacity = "1";
-						second_banner.style.animation = "";
-						second_banner.style.webkitAnimation = "";
-					}
+					} 
 				</script>
 				<ul id="site_tabs">
 					<li><a href="http://www.khoch.io/">&nbsp&nbsp / &nbsp&nbsp</a></li>
@@ -90,5 +97,24 @@
 				</script> --->
 			</div>
 		</div>
+		<script>
+			if (!(anim_played) && !(no_anim_works)){
+				setTimeout(function() { 
+					var first_banner = document.getElementById('firstbanner');
+					var banner_container = document.getElementById('bannercontainer');
+					var second_banner = document.getElementById('secondbanner');
+					var first_banner_height = window.getComputedStyle(first_banner).getPropertyValue('height');
+					var banner_container_height = window.getComputedStyle(banner_container).getPropertyValue('height');
+					var second_banner_opacity = window.getComputedStyle(second_banner).getPropertyValue('opacity');
+					if (first_banner_height == "0px" && banner_container_height == "65px" && second_banner_opacity == "1") {
+						var date = new Date();
+						date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); //1 day
+						expires = "; expires=" + date.toGMTString();
+						document.cookie = "anim_played=true" + expires + "; path=/";
+						console.log("animation played");
+					}
+				}, 5500);
+			}
+		</script>
 	</body>
 </html>
