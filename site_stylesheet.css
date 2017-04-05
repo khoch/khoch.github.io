@@ -81,23 +81,30 @@ div#anim_test_2 {
 	animation: 0.001s 0s 1 testAnimation2 forwards;
 	-webkit-animation: 0.001s 0s 1 testAnimation2 forwards;
 }
-@keyframes fadeAndRollUpFirstBanner {
+@keyframes fadeInFirstBanner {
 	0% {
 		opacity: 0;
 		height: 100px; 
 		padding-top: 15px;
 	}
-	10% {
+	25% {
 		opacity: 0;
 		height: 100px; 
 		padding-top: 15px;
 	}
-	40% {
+	100% {
 		opacity: 1;
 		height: 100px; 
 		padding-top: 15px;
 	}
-	70% {
+}
+@keyframes fadeOutRollUpFirstBanner {
+	0% {
+		opacity: 1;
+		height: 100px; 
+		padding-top: 15px;
+	}
+	50% {
 		opacity: 1;
 		height: 100px; 
 		padding-top: 15px;
@@ -113,23 +120,30 @@ div#anim_test_2 {
 		padding-top: 0px;
 	}
 }
-@-webkit-keyframes fadeAndRollUpFirstBanner {
+@-webkit-keyframes fadeInFirstBanner {
 	0% {
 		opacity: 0;
 		height: 100px; 
 		padding-top: 15px;
 	}
-	10% {
+	25% {
 		opacity: 0;
 		height: 100px; 
 		padding-top: 15px;
 	}
-	40% {
+	100% {
 		opacity: 1;
 		height: 100px; 
 		padding-top: 15px;
 	}
-	70% {
+}
+@-webkit-keyframes fadeOutRollUpFirstBanner {
+	0% {
+		opacity: 1;
+		height: 100px; 
+		padding-top: 15px;
+	}
+	50% {
 		opacity: 1;
 		height: 100px; 
 		padding-top: 15px;
@@ -153,8 +167,8 @@ div#firstbanner {
 	color: #444;
 	letter-spacing: 1px;
 	overflow: hidden;
-	animation: 4.5s ease-in-out 0s 1 fadeAndRollUpFirstBanner forwards;
-	-webkit-animation: 4.5s ease-in-out 0s 1 fadeAndRollUpFirstBanner forwards;
+	animation: 1.8s ease-in-out 0s 1 fadeInFirstBanner forwards, 2.7s ease-in-out 1.8s 1 fadeOutRollUpFirstBanner forwards;
+	-webkit-animation: 1.8s ease-in-out 0s 1 fadeInFirstBanner forwards, 2.7s ease-in-out 1.8s 1 fadeOutRollUpFirstBanner forwards;
 }
 @keyframes rollUpBannerContainer {
 	0% {
