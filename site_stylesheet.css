@@ -143,11 +143,6 @@ div#anim_test_2 {
 		height: 100px; 
 		padding-top: 15px;
 	}
-	50% {
-		opacity: 1;
-		height: 100px; 
-		padding-top: 15px;
-	}
 	99.99% {
 	    opacity: 0;
 		height: 100px; 
