@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>khoch.io</title>
+		<link rel="stylesheet" type="text/css" href="site_stylesheet.css">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	</head>
+	<body>
+		<div id="page">
+			<div id="header">
+				<div id="bannercontainer">
+					<div id="firstbanner">
+						<div id="bigfirstbannertext">Personal Site </div> 
+						<div id="smallfirstbannertext">of</div> 
+						<div id="bigfirstbannertext">Krzysztof Hochlewicz</div> 
+					</div>
+					<div id="secondbanner">
+						<div id="secondbannertext">khoch.io</div> 
+					</div>
+				</div>
+				<ul id="site_tabs">
+					<li id="current_tab" style="padding: 0px 9px !important;"><a href="http://www.khoch.io/">&nbsp&nbsp / &nbsp&nbsp</a></li>
+					<li><a href="http://www.khoch.io/about">About</a></li>
+					<li><a href="http://www.khoch.io/essays">Essays</a></li>
+					<li><a href="http://www.khoch.io/reviews">Reviews</a></li>
+					<li><a href="http://www.khoch.io/blog?">Blog?</a></li>
+					<li><a href="http://www.khoch.io/projects">Projects</a></li>
+					<li><a href="http://www.khoch.io/photography">Photography</a></li>
+					<li><a href="http://www.khoch.io/resume.pdf">R&eacute;sum&eacute;</a></li>
+				</ul>
+			</div>
+			<div id="content">
+				<div id="content_header"> 
+					Recent posts 
+				</div>
+				<div id="posts">
+					<div id="post_title">
+						/Essays/Lorem-Ipsum <!-- On-Stuy -->
+					</div>
+					<div id="post_content">
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.... </p>
+						<!-- <p>Stuy's greatness lies in its students. You could take away the best classes, the best teachers, our relaxed out-for-lunch and out-for-free privileges and our modern school building, but as long as Stuy has its students, it will always be a wonderful school. Why? They're passionate, dedicated, and interesting individuals, but above all else, the people who attend Stuy actually enjoy intellectual discussion. The next time you walk through the halls during...</p> -->
+						<div id="post_link"> 
+							<a href="/Essays/On-Stuy">Read full post</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

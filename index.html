@@ -6,18 +6,76 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	</head>
 	<body>
+		<div id="anim_test_1" style="height: 0px;"></div>
+		<div id="anim_test_2" style="height: 0px;"></div>
+		<!-- <div id="anim_result" style="height: 20px;"></div> -->
 		<div id="page">
 			<div id="header">
 				<div id="bannercontainer">
-					<div id="firstbanner">
-						<div id="bigfirstbannertext">Personal Site </div> 
-						<div id="smallfirstbannertext">of</div> 
-						<div id="bigfirstbannertext">Krzysztof Hochlewicz</div> 
+					<script>
+						if (document.cookie == "anim_played=true") {
+							var anim_played = true;
+						} else {
+							var anim_played = false;
+						}
+						var anim_test_banner_1 = document.getElementById('anim_test_1'),
+						anim_test_banner_2 = document.getElementById('anim_test_2'),
+						anim_result_banner = document.getElementById('anim_result');
+						if (window.getComputedStyle(anim_test_banner_1).getPropertyValue('opacity') != "1") {
+							//anim_result_banner.innerHTML = "Animation will run in this browser with ease-in-out.";
+							var result = "Animation will run in this browser with ease-in-out.";
+						} else if (window.getComputedStyle(anim_test_banner_2).getPropertyValue('opacity') != "1"){
+							//anim_result_banner.innerHTML = "Animation will run in this browser without ease-in-out.";
+							var result = "Animation will run in this browser without ease-in-out.";
+							var limited_anim_works = true;
+						} else {
+							//anim_result_banner.innerHTML = "Animation will not run in this browser.";
+							var result = "Animation will not run in this browser.";
+							var no_anim_works = true;
+						}
+					</script>
+					<div id="firstbannerwrapper">
+						<div id="firstbanner">
+							<div id="bigfirstbannertext">Personal Site </div> 
+							<div id="smallfirstbannertext">of</div> 
+							<div id="bigfirstbannertext">Krzysztof Hochlewicz</div> 
+						</div>
 					</div>
 					<div id="secondbanner">
 						<div id="secondbannertext">khoch.io</div> 
 					</div>
 				</div>
+				<script>
+					if (no_anim_works) { 
+						//skip animation entirely for positively outdated browsers
+						//also skip if played in the past 24h
+						var first_banner = document.getElementById('firstbanner');
+						first_banner.style.opacity = "0"; //redundant, remove soon.
+						first_banner.style.height = "0px";
+						first_banner.style.padding = "0px";
+						first_banner.style.animation = "none";
+						first_banner.style.webkitAnimation = "none";
+						var banner_container = document.getElementById('bannercontainer');
+						banner_container.style.height = "65px";
+						banner_container.style.animation = "none";
+						banner_container.style.webkitAnimation = "none";
+						var second_banner = document.getElementById('secondbanner');
+						second_banner.style.opacity = "1";
+						second_banner.style.animation = "none";
+						second_banner.style.webkitAnimation = "none";
+					} else if (limited_anim_works) { 
+						//if anim hasn't played and ease-in-out is not supported, revert to default (ease)
+						var first_banner = document.getElementById('firstbanner');
+						first_banner.style.animation = "4.5s 0s 1 fadeAndRollUpFirstBanner forwards";
+						first_banner.style.webkitAnimation = "4.5s 0s 1 fadeAndRollUpFirstBanner forwards";
+						var banner_container = document.getElementById('bannercontainer');
+						banner_container.style.animation = "1.5s 4.5s 1 rollUpBannerContainer forwards";
+						banner_container.style.webkitAnimation = "1.5s 4.5s 1 rollUpBannerContainer forwards";
+						var second_banner = document.getElementById('secondbanner');
+						second_banner.style.animation = "1s 4.6s 1 displaySecondBanner forwards";
+						second_banner.style.webkitAnimation = "1s 4.6s 1 displaySecondBanner forwards";
+					} 
+				</script>
 				<ul id="site_tabs">
 					<li id="current_tab" style="padding: 0px 9px !important;"><a href="http://www.khoch.io/">&nbsp&nbsp / &nbsp&nbsp</a></li>
 					<li><a href="http://www.khoch.io/about">About</a></li>
@@ -35,7 +93,7 @@
 				</div>
 				<div id="posts">
 					<div id="post_title">
-						/Essays/On-Stuy
+						/Essays/Lorem-Ipsum <!-- On-Stuy -->
 					</div>
 					<div id="post_content">
 						<p>
